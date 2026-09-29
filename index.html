@@ -11,7 +11,7 @@
 <meta property="og:image" content="og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Luckiest+Guy&family=Caveat:wght@600;700&family=Gochi+Hand&family=Montserrat:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
@@ -146,6 +146,91 @@
 .portrait [data-composition-id="f14"] .f14-link:nth-of-type(6){top:1220px !important;}
 .portrait [data-composition-id="f14"] .f14-link:nth-of-type(7){top:1290px !important;}
 .portrait [data-composition-id="f14"] .f14-link:nth-of-type(8){top:1360px !important;}
+
+  .hero{position:relative;height:calc(100svh + 90svh)}
+  .hero-pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;
+    background:#157A2A;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .12 0'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>"),
+      linear-gradient(90deg,rgba(0,0,0,.28) 0 .6%,transparent .6% 24.4%,rgba(0,0,0,.28) 24.4% 25.6%,transparent 25.6% 49.4%,rgba(0,0,0,.28) 49.4% 50.6%,transparent 50.6% 74.4%,rgba(0,0,0,.28) 74.4% 75.6%,transparent 75.6% 99.4%,rgba(0,0,0,.28) 99.4%),
+      linear-gradient(90deg,rgba(255,255,255,.06) 0 3%,transparent 3% 25%,rgba(255,255,255,.06) 25% 28%,transparent 28% 50%,rgba(255,255,255,.06) 50% 53%,transparent 53% 75%,rgba(255,255,255,.06) 75% 78%,transparent 78%),
+      linear-gradient(#1E9637,#12701F)}
+  .locker-vent{position:absolute;height:9vh;width:22vw;background:repeating-linear-gradient(180deg,#0E5A19 0 1.2vh,#23A640 1.2vh 1.9vh,#157A2A 1.9vh 2.4vh);border-radius:1vh;box-shadow:inset 0 .4vh .6vh rgba(0,0,0,.35)}
+  .locker-knob{position:absolute;width:5vmin;height:7vmin;border-radius:40%;background:radial-gradient(circle at 40% 35%,#FFE27A,#C99A1E 60%,#8A6410);box-shadow:0 .6vmin 1vmin rgba(0,0,0,.4)}
+  .locker-knob::after{content:"";position:absolute;inset:28%;border-radius:50%;border:.5vmin solid rgba(120,80,10,.6)}
+  .decal{position:absolute;opacity:.55;mix-blend-mode:multiply}
+  .decal svg{display:block;width:100%;height:100%}
+
+  .board-wrap{position:absolute;left:50%;top:47%;width:min(78vw,116vh);aspect-ratio:1.45}
+  .portrait .board-wrap{width:min(92vw,58vh);aspect-ratio:.62;top:46%}
+  .board{position:absolute;inset:0;container-type:size;border-radius:.6cqw}
+  .board-frame{position:absolute;inset:0;border-radius:.8cqw;
+    background:linear-gradient(135deg,#D9A160,#B7773A 30%,#C98B4B 55%,#9E6128 80%,#C68848);
+    box-shadow:0 3cqh 5cqh rgba(0,0,0,.45),inset 0 0 0 .35cqw rgba(0,0,0,.25)}
+  .board-cork{position:absolute;inset:2.4cqw;border-radius:.3cqw;background-color:#B98553;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='c'><feTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' seed='7'/><feColorMatrix values='0 0 0 0 .36  0 0 0 0 .22  0 0 0 0 .1  0 0 0 1.1 -.35'/></filter><rect width='100%25' height='100%25' filter='url(%23c)'/></svg>"),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='c'><feTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' seed='7'/><feColorMatrix values='0 0 0 0 .36  0 0 0 0 .22  0 0 0 0 .1  0 0 0 1.1 -.35'/></filter><rect width='100%25' height='100%25' filter='url(%23c)'/></svg>");background-size:180px,120px;background-position:0 0,60px 40px;box-shadow:inset 0 0 2.2cqw rgba(60,30,5,.55)}
+  .portrait .board-cork{inset:3.4cqw}
+
+  /* sticker title */
+  .title{position:absolute;left:0;right:0;top:33cqh;display:flex;justify-content:center;align-items:center;gap:.2cqw;font-family:"Luckiest Guy",cursive;line-height:1}
+  .portrait .title{top:26cqh;flex-wrap:wrap;row-gap:0;padding:0 3cqw}
+  .title .br{display:none;flex-basis:100%;height:0}
+  .portrait .title .br{display:block}
+  .ltr{position:relative;display:inline-block;isolation:isolate;font-size:20cqw;color:#2A3DB5}
+  .portrait .ltr{font-size:31cqw}
+  .ltr span{position:relative;display:block}
+  .ltr::before,.ltr::after{content:attr(data-t);position:absolute;left:0;top:0}
+  .ltr::before{color:#FBFBF8;-webkit-text-stroke:3.2cqw #FBFBF8;z-index:-2}
+  .ltr::after{color:#F5C518;-webkit-text-stroke:1.3cqw #F5C518;transform:translate(.9cqw,1cqw);z-index:-1}
+  .ltr span{z-index:1}
+  .title-small{position:absolute;left:36cqw;top:22cqh;font-family:"Luckiest Guy",cursive;font-size:8cqw;color:#2A3DB5;transform-origin:50% 100%}
+  .portrait .title-small{left:14cqw;top:17cqh;font-size:12cqw}
+  .title-small{isolation:isolate}
+  .title-small span{position:relative;display:inline-block}
+  .title-small::before{content:attr(data-t);position:absolute;left:0;top:0;color:#FBFBF8;-webkit-text-stroke:2.2cqw #FBFBF8;z-index:-1}
+
+  .record{position:relative;display:inline-block;width:17.5cqw;height:17.5cqw;margin-left:.6cqw;border-radius:50%;
+    background:repeating-radial-gradient(circle,#1C1618 0 .55cqw,#2C2426 .55cqw .75cqw);
+    box-shadow:0 0 0 1.6cqw #FBFBF8,0 1.2cqw 2cqw rgba(0,0,0,.4)}
+  .portrait .record{width:27cqw;height:27cqw;box-shadow:0 0 0 2.4cqw #FBFBF8,0 1.8cqw 3cqw rgba(0,0,0,.4)}
+  .record::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 20deg,transparent 0 12%,rgba(255,255,255,.28) 16%,transparent 21% 62%,rgba(255,255,255,.22) 66%,transparent 71%)}
+  .record img{position:absolute;left:31%;top:31%;width:38%;height:38%;border-radius:50%;object-fit:cover;object-position:42% 38%;border:.4cqw solid #EFE7D6}
+  .record i{position:absolute;left:48.5%;top:48.5%;width:3%;height:3%;border-radius:50%;background:#EFE7D6}
+  .squiggle{position:absolute;right:-3cqw;top:-4cqw;width:14cqw}
+  .portrait .squiggle{width:20cqw;right:-5cqw;top:-7cqw}
+
+  .star{position:absolute}
+  .star svg{display:block;width:100%;height:100%;overflow:visible}
+
+  /* clip note */
+  .clipnote{position:absolute;left:43cqw;top:67cqh;width:15cqw;padding:2.4cqw 1.2cqw 1.8cqw;background:#F3EAD7;
+    background-image:repeating-linear-gradient(180deg,transparent 0 2.1cqw,rgba(90,120,200,.35) 2.1cqw 2.2cqw);
+    font-family:"Gochi Hand",cursive;color:#D2401E;font-size:2.7cqw;line-height:1.05;text-align:center;
+    clip-path:polygon(0 0,100% 0,100% 92%,94% 97%,86% 93%,77% 99%,66% 94%,55% 98%,44% 93%,33% 99%,22% 94%,11% 98%,0 94%);
+    filter:drop-shadow(.5cqw .7cqw 0 rgba(0,0,0,.25))}
+  .portrait .clipnote{left:30cqw;top:71cqh;width:40cqw;font-size:6.4cqw;padding:5.6cqw 3cqw 4cqw;background-image:repeating-linear-gradient(180deg,transparent 0 5cqw,rgba(90,120,200,.35) 5cqw 5.2cqw)}
+  .binder{position:absolute;left:47.5cqw;top:63.2cqh;width:6cqw;height:4.6cqw}
+  .portrait .binder{left:43cqw;top:68.4cqh;width:14cqw;height:10cqw}
+  .binder svg{display:block;width:100%;height:100%}
+
+  /* pinned note */
+  .pinnote{position:absolute;right:6cqw;top:8cqh;width:12.5cqw;padding:1.6cqw 1.2cqw;background:#F7D548;
+    font-family:"Caveat",cursive;font-weight:700;color:#1E1A10;font-size:2.8cqw;line-height:.98;transform-origin:50% 0;
+    box-shadow:.6cqw 1cqw 1.4cqw rgba(0,0,0,.3)}
+  .pinnote b{display:block;font-weight:700}
+  .portrait .pinnote{right:5cqw;top:5cqh;width:30cqw;font-size:6.6cqw;padding:3.6cqw 2.8cqw}
+  .pushpin{position:absolute;right:11.5cqw;top:3.6cqh;width:5.4cqw;height:5.4cqw;z-index:3}
+  .portrait .pushpin{right:17cqw;top:2cqh;width:11cqw;height:11cqw}
+  .pushpin svg{display:block;width:100%;height:100%;overflow:visible}
+
+  /* starburst */
+  .burst{position:absolute;left:-7cqw;top:-7cqh;width:24cqw;height:24cqw;z-index:4}
+  .portrait .burst{left:-6cqw;top:-4cqh;width:40cqw;height:40cqw}
+  .burst svg{display:block;width:100%;height:100%;overflow:visible}
+
+  .hero-cue{position:absolute;left:50%;bottom:max(26px,env(safe-area-inset-bottom));transform:translateX(-50%);font:700 13px "Space Mono",monospace;letter-spacing:.22em;color:#FBFBF8;background:rgba(11,11,18,.55);padding:10px 18px;border-radius:99px;white-space:nowrap}
+  .hero-cue i{display:inline-block;font-style:normal}
+  .hero-tag{position:absolute;left:50%;bottom:max(76px,calc(env(safe-area-inset-bottom) + 56px));transform:translateX(-50%);font:700 12px "Space Mono",monospace;letter-spacing:.16em;color:#DFF7E5;text-align:center;white-space:nowrap}
+  @media (max-width:600px){.hero-tag{font-size:10px;letter-spacing:.08em;white-space:normal;width:88vw;line-height:1.6}}
+
   /* chrome */
   .hud{position:fixed;z-index:100;display:flex;gap:10px;right:max(16px,env(safe-area-inset-right));top:max(16px,env(safe-area-inset-top))}
   .btn{font:700 13px/1 "Space Mono",monospace;letter-spacing:.08em;text-transform:uppercase;background:#FBFBF8;color:#0B0B12;border:3px solid #0B0B12;border-radius:99px;padding:10px 16px;cursor:pointer;box-shadow:4px 5px 0 rgba(11,11,18,.35);text-decoration:none;display:inline-block}
@@ -171,8 +256,51 @@
   <button class="btn" id="watch" type="button">▶ Film</button>
   <button class="btn" id="sound" type="button" aria-pressed="false">Sound off</button>
 </div>
-<div class="hint" id="hint">SCROLL ↓</div>
 <main>
+
+<section class="hero" id="hero" aria-label="Varun's portfolio cover">
+  <div class="hero-pin">
+    <div class="hero-bg">
+      <div class="locker-vent" style="left:4vw;top:24vh"></div>
+      <div class="locker-vent" style="right:4vw;top:24vh"></div>
+      <div class="locker-vent" style="right:4vw;top:70vh"></div>
+      <div class="locker-knob" style="left:3vw;top:56vh"></div>
+      <div class="decal" style="left:30vw;top:-4vh;width:15vmin;height:15vmin;transform:rotate(-12deg)"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#C9E86A"/><circle cx="50" cy="50" r="36" fill="none" stroke="#12701F" stroke-width="3" stroke-dasharray="4 5"/><circle cx="38" cy="42" r="5" fill="#12701F"/><circle cx="62" cy="42" r="5" fill="#12701F"/><path d="M33 58 Q50 76 67 58" fill="none" stroke="#12701F" stroke-width="5" stroke-linecap="round"/></svg></div>
+      <div class="decal" style="left:55vw;top:2vh;width:13vmin;height:13vmin;transform:rotate(8deg)"><svg viewBox="0 0 100 100"><defs><path id="rp24" d="M50 50 m-34 0 a34 34 0 1 1 68 0 a34 34 0 1 1 -68 0"/></defs><circle cx="50" cy="50" r="47" fill="#C9E86A"/><text font-family="Space Mono,monospace" font-weight="700" font-size="10" fill="#12701F" letter-spacing="2"><textPath href="#rp24">BUILD · SHIP · REPEAT · </textPath></text><circle cx="50" cy="50" r="14" fill="#12701F"/></svg></div>
+      <div class="decal" style="left:40vw;top:3vh;width:16vmin;height:16vmin;transform:rotate(14deg)"><svg viewBox="0 0 100 100"><rect x="6" y="18" width="88" height="64" rx="6" fill="#5FB8E8"/><text x="50" y="60" text-anchor="middle" font-family="Luckiest Guy,cursive" font-size="30" fill="#0E3F9A">EDGE AI</text></svg></div>
+      <div class="decal" style="left:6vw;top:72vh;width:14vmin;height:14vmin;transform:rotate(-8deg)"><svg viewBox="0 0 100 100"><defs><path id="rp23" d="M50 50 m-34 0 a34 34 0 1 1 68 0 a34 34 0 1 1 -68 0"/></defs><circle cx="50" cy="50" r="47" fill="#C9E86A"/><text font-family="Space Mono,monospace" font-weight="700" font-size="10" fill="#12701F" letter-spacing="2"><textPath href="#rp23">ESP32 · YOLO · REACT · </textPath></text><circle cx="50" cy="50" r="14" fill="#12701F"/></svg></div>
+      <div class="decal" style="left:82vw;top:54vh;width:13vmin;height:13vmin;transform:rotate(10deg)"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#C9E86A"/><circle cx="50" cy="50" r="36" fill="none" stroke="#12701F" stroke-width="3" stroke-dasharray="4 5"/><circle cx="38" cy="42" r="5" fill="#12701F"/><circle cx="62" cy="42" r="5" fill="#12701F"/><path d="M33 58 Q50 76 67 58" fill="none" stroke="#12701F" stroke-width="5" stroke-linecap="round"/></svg></div>
+      <div class="decal" style="left:70vw;top:80vh;width:17vmin;height:17vmin;transform:rotate(-14deg)"><svg viewBox="0 0 100 100"><rect x="6" y="18" width="88" height="64" rx="6" fill="#5FB8E8"/><text x="50" y="60" text-anchor="middle" font-family="Luckiest Guy,cursive" font-size="30" fill="#0E3F9A">IoT</text></svg></div>
+      <div class="decal" style="left:24vw;top:84vh;width:12vmin;height:12vmin;transform:rotate(6deg)"><svg viewBox="0 0 100 100"><defs><path id="rp18" d="M50 50 m-34 0 a34 34 0 1 1 68 0 a34 34 0 1 1 -68 0"/></defs><circle cx="50" cy="50" r="47" fill="#C9E86A"/><text font-family="Space Mono,monospace" font-weight="700" font-size="10" fill="#12701F" letter-spacing="2"><textPath href="#rp18">CHENNAI · INDIA · </textPath></text><circle cx="50" cy="50" r="14" fill="#12701F"/></svg></div>
+    </div>
+    <div class="board-wrap" id="board-wrap">
+      <div class="board" id="board">
+        <div class="board-frame"></div>
+        <div class="board-cork"></div>
+
+        <div class="star" id="hs1" style="left:27cqw;top:26cqh;width:9cqw;height:9cqw"><svg viewBox="0 0 100 100"><path d="M50 3 L61 37 L97 37 L68 58 L79 93 L50 71 L21 93 L32 58 L3 37 L39 37 Z" fill="#E4471E" stroke="#F5C518" stroke-width="6" stroke-linejoin="round"/></svg></div>
+        <div class="star" id="hs2" style="left:62cqw;top:20cqh;width:6cqw;height:6cqw"><svg viewBox="0 0 100 100"><path d="M50 3 L61 37 L97 37 L68 58 L79 93 L50 71 L21 93 L32 58 L3 37 L39 37 Z" fill="#F5C518" stroke="#FBFBF8" stroke-width="6" stroke-linejoin="round"/></svg></div>
+        <div class="star" id="hs3" style="left:58cqw;top:62cqh;width:8cqw;height:8cqw"><svg viewBox="0 0 100 100"><path d="M50 3 L61 37 L97 37 L68 58 L79 93 L50 71 L21 93 L32 58 L3 37 L39 37 Z" fill="#E4471E" stroke="#F5C518" stroke-width="6" stroke-linejoin="round"/></svg></div>
+        <div class="star" id="hs4" style="left:39cqw;top:68cqh;width:4.5cqw;height:4.5cqw"><svg viewBox="0 0 100 100"><path d="M50 3 L61 37 L97 37 L68 58 L79 93 L50 71 L21 93 L32 58 L3 37 L39 37 Z" fill="#6D8BD8" stroke="#2A3DB5" stroke-width="5" stroke-linejoin="round"/></svg></div>
+
+        <div class="title-small" id="t-small" data-t="Varun's"><span>Varun's</span></div>
+        <div class="title" id="title">
+          <span class="ltr" data-t="P"><span>P</span></span><span class="ltr" data-t="O"><span>O</span></span><span class="ltr" data-t="R"><span>R</span></span><span class="ltr" data-t="T"><span>T</span></span><span class="br"></span><span class="ltr" data-t="F"><span>F</span></span><span class="ltr" data-t="O"><span>O</span></span><span class="ltr" data-t="L"><span>L</span></span><span class="ltr" data-t="I"><span>I</span></span><span class="record" id="record" role="img" aria-label="O — a spinning record with Varun's photo"><img src="assets/img/avatar-badge.jpg" alt="" /><i></i><svg class="squiggle" viewBox="0 0 120 40"><path d="M4 30 Q18 4 30 22 T56 18 T82 20 T112 8" fill="none" stroke="#F5C518" stroke-width="7" stroke-linecap="round"/></svg></span>
+        </div>
+
+        <div class="binder"><svg viewBox="0 0 60 46"><path d="M8 20 L52 20 L48 44 L12 44 Z" fill="#C99A1E"/><path d="M8 20 L52 20 L48 44 L12 44 Z" fill="none" stroke="#8A6410" stroke-width="2"/><path d="M18 20 Q18 2 30 2 Q42 2 42 20" fill="none" stroke="#B8B8B8" stroke-width="4"/></svg></div>
+        <div class="clipnote" id="clipnote">AI · Embedded · Full-Stack</div>
+
+        <div class="pinnote" id="pinnote"><b>Build</b><b>bigger.</b><b>Bigger.</b><b style="font-size:1.25em">BIGGER.</b></div>
+        <div class="pushpin" id="pushpin"><svg viewBox="0 0 60 60"><ellipse cx="30" cy="54" rx="10" ry="3" fill="rgba(0,0,0,.25)"/><path d="M30 34 L26 56" stroke="#9A9A9A" stroke-width="3"/><path d="M16 26 Q30 40 44 26 L40 22 L20 22 Z" fill="#B3121B"/><rect x="22" y="8" width="16" height="16" rx="3" fill="#D81E28"/><ellipse cx="30" cy="8" rx="13" ry="6" fill="#EF3A42"/><ellipse cx="26" cy="7" rx="4" ry="2" fill="#FF9AA0"/></svg></div>
+
+        <div class="burst" id="burst"><svg viewBox="0 0 100 100"><polygon points="50.0,0.0 57.1,18.8 71.7,5.0 69.3,25.8 89.1,18.8 77.0,37.0 98.7,38.9 84.0,50.0 98.7,61.1 79.7,64.3 89.1,81.2 70.0,75.0 71.7,95.0 56.9,80.2 50.0,100.0 43.3,79.2 28.3,95.0 28.8,76.6 10.9,81.2 20.3,64.3 1.3,61.1 18.0,50.0 1.3,38.9 22.1,36.5 10.9,18.8 31.3,26.5 28.3,5.0 42.4,16.9" fill="#F7E64B" stroke="#1E1A10" stroke-width="1.2" stroke-linejoin="round"/><polygon points="50.0,8.0 56.0,23.7 68.2,12.2 66.2,29.7 82.8,23.8 72.5,39.2 90.9,40.7 79.0,50.0 90.9,59.3 75.2,62.1 82.8,76.2 66.8,71.1 68.2,87.8 55.8,75.3 50.0,92.0 44.4,74.4 31.8,87.8 31.9,72.7 17.2,76.2 24.8,62.1 9.1,59.3 23.0,50.0 9.1,40.7 26.6,38.7 17.2,23.8 34.4,30.5 31.8,12.2 43.5,21.7" fill="#6A58C6"/><text x="50" y="58" text-anchor="middle" transform="rotate(-18 50 50)" font-family="Luckiest Guy,cursive" font-size="20" fill="#FBFBF8" stroke="#2A3DB5" stroke-width="1">2026</text></svg></div>
+      </div>
+    </div>
+    <div class="hero-tag">CAMPUS TECH AMBASSADOR · RIT &nbsp;·&nbsp; CO-FOUNDER &amp; CTO · FITTI</div>
+    <div class="hero-cue" id="hero-cue">SCROLL TO PLAY <i>↓</i></div>
+  </div>
+</section>
 
 <section class="scene" id="f01" data-dur="4.5" data-vo="audio/vo-01.mp3" data-bleed='{"base":"#EEEEEA","top":"#EEEEEA","bottom":"#0A3CFF"}' style="height:calc(100svh + 153svh)">
   <div class="pin"><div class="bleed-t"></div><div class="bleed-b"></div><div class="stage">
@@ -188,9 +316,9 @@
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -209,7 +337,7 @@
 <div class="fill paperbg"></div>
 <div id="f01-cam" class="fill">
 
-  <div class="logo">VS<i></i></div>
+  <div class="logo"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   <div id="f01-name" class="abs disp" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>VARUN&nbsp;S</div>
   <div id="f01-sub" class="abs mono" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>AI · EMBEDDED · FULL-STACK</div>
   <div id="f01-q" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style=""><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#5FE0B8;color:#0B0B12;font-size:56px;clip-path:polygon(1.2% 1.4%,22% 1.8%,48% 0.4%,74% 3.6%,95.8% 0.4%,98.2% 45%,99.5% 98.9%,70% 96.1%,44% 98.6%,20% 98.2%,1.8% 97.4%,1.6% 50%)">PICK A LANE?</div></div>
@@ -262,9 +390,9 @@ window.__siteTimelines["f01"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -303,7 +431,7 @@ window.__siteTimelines["f01"]=tl;
   <div class="abs f02-row f02-q" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="top:910px;font-size:100px;opacity:.55">??????</div>
   <div id="f02-lanes"><div id="f02-l1" class="disp f02-lane" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>HARDWARE?<div class="f02-strike"></div></div><div id="f02-l2" class="disp f02-lane" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>SOFTWARE?<div class="f02-strike"></div></div><div id="f02-l3" class="disp f02-lane" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>AI?<div class="f02-strike"></div></div></div>
   <div id="f02-no" class="abs mono" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>I DIDN'T CHOOSE.</div>
-  <div class="logo w">VS<i></i></div>
+  <div class="logo w"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -357,9 +485,9 @@ window.__siteTimelines["f02"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -384,7 +512,7 @@ window.__siteTimelines["f02"]=tl;
   </div>
   <div id="f03-s1" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style=""><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#5FE0B8;color:#0B0B12;font-size:150px;clip-path:polygon(1.2% 1.8%,22% 2.8%,48% 2.6%,74% 3.6%,95.9% 1.3%,98.2% 45%,99% 95.5%,70% 98.8%,44% 97.6%,20% 99.6%,3.9% 98.7%,0.6% 50%)">EVERYTHING</div></div>
   <div id="f03-s2" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style=""><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#0B0B12;color:#FBFBF8;font-size:64px;clip-path:polygon(1.2% 4.5%,22% 3.4%,48% 3.7%,74% 3.6%,98.5% 4.2%,99.5% 45%,98.7% 98.8%,70% 95.2%,44% 97%,20% 95.3%,2.4% 96.9%,0.1% 50%)">ENTIRE SYSTEMS.</div></div>
-  <div class="logo w">VS<i></i></div>
+  <div class="logo w"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -433,9 +561,9 @@ window.__siteTimelines["f03"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -486,7 +614,7 @@ window.__siteTimelines["f03"]=tl;
   <div id="f04-s1" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="left:110px;top:440px"><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#0B0B12;color:#FBFBF8;font-size:96px;clip-path:polygon(1.3% 5.0%,22% 4.5%,48% 0.9%,74% 3.5%,98.6% 0.1%,99.5% 45%,98.2% 95.3%,70% 98%,44% 95.9%,20% 96.7%,4.5% 98.2%,1.55% 50%)">SEES</div></div>
   <div id="f04-s2" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="left:720px;top:800px"><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#FBFBF8;color:#0A3CFF;font-size:96px;clip-path:polygon(1.3% 0.9%,22% 1.3%,48% 1.3%,74% 0.2%,96.1% 4.4%,99.9% 45%,98.1% 99.7%,70% 98.5%,44% 99.1%,20% 96.9%,4.1% 95.9%,1.4% 50%)">THINKS</div></div>
   <div id="f04-s3" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="left:1400px;top:450px"><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#5FE0B8;color:#0B0B12;font-size:96px;clip-path:polygon(1.3% 2.7%,22% 0.0%,48% 2.0%,74% 3.5%,96.2% 3.0%,98.25% 45%,97.9% 98.6%,70% 99.4%,44% 95.4%,20% 97.4%,3.1% 96.3%,1.05% 50%)">SCALES</div></div>
-  <div class="logo">VS<i></i></div>
+  <div class="logo"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -536,9 +664,9 @@ window.__siteTimelines["f04"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -554,8 +682,8 @@ window.__siteTimelines["f04"]=tl;
   [data-composition-id="f05"] #f05-clip{position:absolute;left:262px;top:240px;width:76px;height:50px;border-radius:10px;background:#9aa0a8}
   [data-composition-id="f05"] #f05-badge{position:absolute;left:80px;top:280px;width:440px;height:600px;background:#FBFBF8;border-radius:26px;overflow:hidden}
   [data-composition-id="f05"] .f05-head{height:150px;background:#0A3CFF;color:#FBFBF8;font-size:40px;display:flex;align-items:flex-start;justify-content:center;padding-top:22px}
-  [data-composition-id="f05"] .f05-photo{width:180px;height:180px;border-radius:50%;margin:-80px auto 0;border:10px solid #FBFBF8;display:flex;align-items:center;justify-content:center}
-  [data-composition-id="f05"] .f05-photo span{font-size:64px;color:#FBFBF8;text-shadow:0 0 0 #000}
+  [data-composition-id="f05"] .f05-photo{width:210px;height:210px;border-radius:50%;margin:-95px auto 0;border:10px solid #FBFBF8;overflow:hidden;background:#D9D9D4}
+  [data-composition-id="f05"] .f05-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
   [data-composition-id="f05"] .f05-name{text-align:center;font-size:62px;margin-top:22px}
   [data-composition-id="f05"] .f05-t{text-align:center;font-size:23px;line-height:1.45;margin-top:14px;color:#0B0B12;padding:0 24px}
   [data-composition-id="f05"] #f05-t2{color:#0A3CFF}
@@ -574,7 +702,7 @@ window.__siteTimelines["f04"]=tl;
     <div id="f05-strap"></div><div id="f05-clip"></div>
     <div id="f05-badge" class="card-shadow">
       <div class="f05-head disp" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>RIT</div>
-      <div class="f05-photo halftone-d"><span class="disp" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>VS</span></div>
+      <div class="f05-photo"><img src="assets/img/avatar-badge.jpg" alt="Varun S" /></div>
       <div class="f05-name disp" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>VARUN S</div>
       <div id="f05-t1" class="f05-t mono" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>CAMPUS TECHNICAL AMBASSADOR</div>
       <div id="f05-t2" class="f05-t mono" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>RAJALAKSHMI INSTITUTE OF TECHNOLOGY</div>
@@ -583,7 +711,7 @@ window.__siteTimelines["f04"]=tl;
   </div>
   <div id="f05-yr" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style=""><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#5FE0B8;color:#0B0B12;font-size:80px;clip-path:polygon(1.3% 0.4%,22% 0.5%,48% 3.1%,74% 3.5%,98.7% 0.9%,99.5% 45%,97.7% 96.9%,70% 95.8%,44% 99.8%,20% 98.1%,1.7% 99.5%,0.55% 50%)">NOW</div></div>
   <div id="f05-tear" class="band" style="bottom:-4px;height:130px;background:#0A3CFF;clip-path:polygon(0.00% 23.7%,2.63% 4.6%,5.26% 32.8%,7.89% 19.9%,10.53% 52.2%,13.16% 11.9%,15.79% 1.0%,18.42% 16.4%,21.05% 22.5%,23.68% 32.6%,26.32% 51.0%,28.95% 31.2%,31.58% 51.1%,34.21% 30.4%,36.84% 17.1%,39.47% 49.1%,42.11% 2.8%,44.74% 54.3%,47.37% 9.3%,50.00% 25.8%,52.63% 28.8%,55.26% 42.4%,57.89% 47.7%,60.53% 25.3%,63.16% 16.4%,65.79% 20.9%,68.42% 35.4%,71.05% 54.2%,73.68% 23.6%,76.32% 48.2%,78.95% 4.6%,81.58% 19.7%,84.21% 46.4%,86.84% 33.3%,89.47% 36.6%,92.11% 33.7%,94.74% 9.9%,97.37% 15.6%,100.00% 38.1%,100% 100%,0% 100%)"></div>
-  <div class="logo">VS<i></i></div>
+  <div class="logo"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -633,9 +761,9 @@ window.__siteTimelines["f05"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -678,7 +806,7 @@ window.__siteTimelines["f05"]=tl;
   </div>
   <div id="f06-role" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style=""><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#0B0B12;color:#FBFBF8;font-size:60px;clip-path:polygon(1.3% 4.1%,22% 2.9%,48% 4.6%,74% 0.2%,98.8% 3.2%,98.7% 45%,97.3% 99.6%,70% 97.6%,44% 97.4%,20% 99%,4.7% 95.3%,2.35% 50%)">CO-FOUNDER · CTO</div></div>
   <div id="f06-tag" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style=""><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#5FE0B8;color:#0B0B12;font-size:54px;clip-path:polygon(1.3% 1.8%,22% 3.5%,48% 0.7%,74% 0.2%,96.4% 1.1%,99.95% 45%,97% 97.8%,70% 99%,44% 96.9%,20% 99.7%,3.3% 98.5%,1.85% 50%)">FITNESS. FULLY MANAGED.</div></div>
-  <div class="logo">VS<i></i></div>
+  <div class="logo"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -728,9 +856,9 @@ window.__siteTimelines["f06"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -786,7 +914,7 @@ window.__siteTimelines["f06"]=tl;
   </div>
   <div id="f07-price" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style=""><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#FFD23F;color:#0B0B12;font-size:64px;clip-path:polygon(1.3% 3.6%,22% 2.2%,48% 1.5%,74% 3.5%,96.5% 4.7%,98.3% 45%,96.9% 96.7%,70% 99.9%,44% 98.2%,20% 95.1%,2.3% 98.9%,1.5% 50%)">$15 CHIP</div></div>
   <div id="f07-tear" class="band" style="bottom:-4px;height:120px;background:#0A3CFF;clip-path:polygon(0.00% 28.1%,2.63% 22.3%,5.26% 50.0%,7.89% 46.1%,10.53% 31.7%,13.16% 13.9%,15.79% 4.8%,18.42% 19.8%,21.05% 9.3%,23.68% 10.9%,26.32% 31.9%,28.95% 49.5%,31.58% 14.0%,34.21% 45.1%,36.84% 23.9%,39.47% 2.4%,42.11% 54.3%,44.74% 3.2%,47.37% 26.6%,50.00% 32.9%,52.63% 6.8%,55.26% 25.4%,57.89% 14.0%,60.53% 52.0%,63.16% 0.7%,65.79% 34.4%,68.42% 38.9%,71.05% 51.4%,73.68% 1.1%,76.32% 31.5%,78.95% 42.8%,81.58% 38.1%,84.21% 23.8%,86.84% 5.3%,89.47% 51.4%,92.11% 0.5%,94.74% 11.4%,97.37% 18.0%,100.00% 9.8%,100% 100%,0% 100%)"></div>
-  <div class="logo">VS<i></i></div>
+  <div class="logo"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -844,9 +972,9 @@ window.__siteTimelines["f07"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -889,7 +1017,7 @@ window.__siteTimelines["f07"]=tl;
   <div id="f08-p2" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style=""><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#5FE0B8;color:#0B0B12;font-size:72px;clip-path:polygon(1.4% 1.8%,22% 3.8%,48% 4.8%,74% 3.5%,99.2% 3.5%,99.55% 45%,96.1% 96.5%,70% 99.1%,44% 96.6%,20% 97.2%,3.0% 98.4%,2.5% 50%)">RIT-IPR</div></div>
   <div id="f08-c1" class="abs mono f08-cap" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="left:890px;top:960px">PRIOR-ART &amp; NOVELTY ENGINE</div>
   <div id="f08-c2" class="abs mono f08-cap" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="left:1370px;top:980px">AI PATENT FILING · RIT</div>
-  <div class="logo w">VS<i></i></div>
+  <div class="logo w"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -939,9 +1067,9 @@ window.__siteTimelines["f08"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -981,7 +1109,7 @@ window.__siteTimelines["f08"]=tl;
   </div>
   <div id="f09-title" class="abs disp" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>RIDGE WATCH</div>
   <div id="f09-pill" class="abs mono" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>DIGITAL TWIN · SIMULATION</div>
-  <div class="logo w">VS<i></i></div>
+  <div class="logo w"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -1037,9 +1165,9 @@ window.__siteTimelines["f09"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -1083,7 +1211,7 @@ window.__siteTimelines["f09"]=tl;
     <div class="aq-l mono" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>SENSORS · LIVE DASHBOARD</div>
     <div class="aq-g"><div id="f10-gfill"></div></div>
   </div>
-  <div class="logo w">VS<i></i></div>
+  <div class="logo w"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -1135,9 +1263,9 @@ window.__siteTimelines["f10"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -1185,7 +1313,7 @@ window.__siteTimelines["f10"]=tl;
     <div class="pp-ln"></div><div class="pp-ln" style="width:85%"></div><div class="pp-ln"></div><div class="pp-ln" style="width:60%"></div>
   </div>
   <div id="f11-tear" class="band" style="bottom:-4px;height:120px;background:#0A3CFF;clip-path:polygon(0.00% 36.7%,2.63% 2.8%,5.26% 29.2%,7.89% 43.6%,10.53% 45.5%,13.16% 18.1%,15.79% 12.4%,18.42% 26.7%,21.05% 38.0%,23.68% 22.4%,26.32% 48.7%,28.95% 31.0%,31.58% 49.9%,34.21% 19.5%,36.84% 37.3%,39.47% 19.1%,42.11% 47.4%,44.74% 11.0%,47.37% 6.1%,50.00% 47.2%,52.63% 17.7%,55.26% 46.4%,57.89% 1.6%,60.53% 50.4%,63.16% 24.3%,65.79% 6.5%,68.42% 46.0%,71.05% 45.8%,73.68% 11.0%,76.32% 53.2%,78.95% 9.4%,81.58% 20.0%,84.21% 33.6%,86.84% 4.3%,89.47% 26.1%,92.11% 44.0%,94.74% 14.5%,97.37% 22.9%,100.00% 8.3%,100% 100%,0% 100%)"></div>
-  <div class="logo">VS<i></i></div>
+  <div class="logo"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -1237,9 +1365,9 @@ window.__siteTimelines["f11"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -1261,7 +1389,7 @@ window.__siteTimelines["f11"]=tl;
   <div id="f12-b" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="left:980px;top:330px"><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#5FE0B8;color:#0B0B12;font-size:96px;clip-path:polygon(1.4% 2.2%,22% 0.2%,48% 1.1%,74% 1.8%,97% 1.8%,99.2% 45%,99.6% 96.8%,70% 97%,44% 95.2%,20% 96.2%,4.8% 99.5%,2.1% 50%)">1ST · RIT SDG</div></div>
   <div id="f12-c" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="left:220px;top:560px"><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#FFD23F;color:#0B0B12;font-size:88px;clip-path:polygon(1.4% 4.0%,22% 3.9%,48% 1.8%,74% 0.1%,97.1% 0.4%,97.5% 45%,99.4% 95.6%,70% 97.9%,44% 96.5%,20% 96.6%,3.8% 100%,1.75% 50%)">DESIGNATHON WINNER</div></div>
   <div id="f12-d" class="stk " data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="left:980px;top:800px"><div class="stk-in" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow style="background:#0B0B12;color:#FBFBF8;font-size:50px;clip-path:polygon(1.4% 0.8%,22% 2.6%,48% 2.6%,74% 3.5%,97.1% 4.0%,98.35% 45%,99.3% 99.5%,70% 98.8%,44% 97.8%,20% 97.1%,2.9% 95.4%,1.45% 50%)">TOP 30 · EDI-TN NIMIRNTHU NIL</div></div>
-  <div class="logo w">VS<i></i></div>
+  <div class="logo w"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -1306,9 +1434,9 @@ window.__siteTimelines["f12"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -1350,7 +1478,7 @@ window.__siteTimelines["f12"]=tl;
   <div id="f13-win" class="abs card-shadow"><div class="bar"><i></i><i></i><i></i></div><div id="f13-btn" class="disp" data-layout-allow-overlap data-layout-allow-occlusion data-layout-allow-overflow>HIRE ME</div></div>
   <div id="f13-rip" class="abs"></div>
   <div id="f13-cur" class="abs"></div>
-  <div class="logo w">VS<i></i></div>
+  <div class="logo w"><img src="assets/img/avatar.jpg" alt="Varun S" /></div>
   
 </div>
 </div>
@@ -1403,9 +1531,9 @@ window.__siteTimelines["f13"]=tl;
 .abs{position:absolute}
 .disp{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.01em;white-space:nowrap}
 .mono{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.06em}
-.logo{position:absolute;left:52px;top:44px;font-family:"Archivo Black",sans-serif;font-size:34px;color:#0A3CFF;z-index:60;letter-spacing:.02em}
-.logo.w{color:#FBFBF8}
-.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:#5FE0B8;margin-left:6px;vertical-align:middle}
+.logo{position:absolute;left:48px;top:40px;width:88px;height:88px;border-radius:50%;overflow:hidden;border:5px solid #0A3CFF;background:#D9D9D4;z-index:60;box-shadow:5px 6px 0 rgba(11,11,18,.22)}
+.logo.w{border-color:#FBFBF8}
+.logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:42% 38%}
 .stk{position:absolute;filter:drop-shadow(10px 12px 0 rgba(11,11,18,.22))}
 .stk-in{font-family:"Archivo Black",sans-serif;text-transform:uppercase;white-space:nowrap;padding:18px 38px;line-height:1}
 .halftone{background-color:#D9D9D4;background-image:radial-gradient(#141418 34%,transparent 36%);background-size:17px 17px}
@@ -1483,6 +1611,41 @@ window.__siteTimelines["f14"]=tl;
 </footer>
 <dialog id="film"><button class="btn close" id="closefilm" type="button">Close</button><video src="varun-portfolio.mp4" controls playsinline preload="none" poster="og.jpg"></video></dialog>
 <script>
+
+function initHero(reduce){
+  const wrap = document.getElementById("board-wrap");
+  gsap.set(wrap, { xPercent: -50, yPercent: -50, rotation: -3 });
+  const L = gsap.utils.toArray(".title .ltr");
+  if (reduce) return;
+  const intro = gsap.timeline({ delay: .05 });
+  intro.from(".hero-bg .decal", { scale: 0, rotation: "-=40", opacity: 0, duration: .5, ease: "back.out(2)", stagger: .05 }, 0)
+       .from(wrap, { y: "-110vh", rotation: 10, duration: .7, ease: "bounce.out" }, 0)
+       .from("#t-small", { scale: 0, rotation: -30, duration: .45, ease: "back.out(3)" }, .45)
+       .from(L, { scale: 0, y: -60, rotation: () => gsap.utils.random(-40, 40), duration: .5, ease: "back.out(2.4)", stagger: .05 }, .5)
+       .from("#record", { x: "45vw", rotation: 540, duration: .9, ease: "power3.out" }, .7)
+       .from(["#hs1","#hs2","#hs3","#hs4"], { scale: 0, rotation: 180, duration: .5, ease: "back.out(3)", stagger: .08 }, .95)
+       .from(".binder,#clipnote", { y: 80, opacity: 0, duration: .45, ease: "power3.out", stagger: .05 }, 1.1)
+       .from("#pushpin", { y: -200, opacity: 0, duration: .35, ease: "power4.in" }, 1.15)
+       .from("#pinnote", { rotation: 25, y: -40, opacity: 0, duration: 1.1, ease: "elastic.out(1,.35)" }, 1.4)
+       .from("#burst", { scale: 0, rotation: -120, duration: .6, ease: "back.out(2.6)" }, 1.25)
+       .from(".hero-tag,#hero-cue", { y: 30, opacity: 0, duration: .5, stagger: .1 }, 1.5);
+  // GIF-like idle loops
+  gsap.to("#record", { rotation: "+=360", duration: 3.2, ease: "none", repeat: -1, delay: 2 });
+  L.forEach((l, i) => gsap.to(l.firstElementChild, { y: "-7%", rotation: i % 2 ? 3 : -3, duration: .9, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 2 + i * .09 }));
+  gsap.to("#t-small", { rotation: -8, duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 2 });
+  gsap.fromTo("#burst svg", { rotation: -6 }, { rotation: 6, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 2.4 });
+  gsap.to("#pinnote", { rotation: 7, duration: 2.2, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 3 });
+  ["#hs1","#hs2","#hs3","#hs4"].forEach((s, i) => gsap.to(s, { scale: 1.18, rotation: "+=25", duration: .8 + i * .15, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 2 + i * .2 }));
+  gsap.to(".hero-bg .decal", { y: "+=10", duration: 2.6, ease: "sine.inOut", yoyo: true, repeat: -1, stagger: { each: .3, from: "random" } });
+  gsap.to("#hero-cue i", { y: 6, duration: .6, ease: "sine.inOut", yoyo: true, repeat: -1 });
+  // scroll: the board zooms away into the film
+  gsap.timeline({ scrollTrigger: { trigger: "#hero", start: "top top", end: "bottom top", scrub: .6 } })
+    .to(wrap, { scale: .55, rotation: -12, y: "-18vh", ease: "power1.in" }, 0)
+    .to(wrap, { opacity: 0, ease: "none", duration: .35 }, .65)
+    .to(".hero-bg", { scale: 1.25, opacity: .35, ease: "none" }, 0)
+    .to(".hero-tag,#hero-cue", { opacity: 0, duration: .2 }, 0);
+}
+
 (function(){
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const portrait = window.__HF_PORTRAIT;
@@ -1561,16 +1724,14 @@ window.__siteTimelines["f14"]=tl;
     tl.pause(0);
     if (reduce) { tl.seek(dur); return; }
     ScrollTrigger.create({
-      trigger: sec, start: "top top", end: "bottom bottom", scrub: 0.6,
+      trigger: sec, start: "top 70%", end: "bottom bottom", scrub: 0.6,
       onUpdate: self => tl.seek(self.progress * dur, false),
       onToggle: self => { if (self.isActive) { active = sec.id; speak(sec.id); } }
     });
   });
-  const bar = document.getElementById("bar"), hint = document.getElementById("hint");
-  ScrollTrigger.create({ start: 0, end: "max", onUpdate: self => {
-    bar.style.transform = "scaleX(" + self.progress + ")";
-    if (self.progress > 0.005) hint.classList.add("gone");
-  }});
+  const bar = document.getElementById("bar");
+  ScrollTrigger.create({ start: 0, end: "max", onUpdate: self => { bar.style.transform = "scaleX(" + self.progress + ")"; } });
+  initHero(reduce);
   document.fonts && document.fonts.ready.then(() => ScrollTrigger.refresh());
 
   const watch = document.getElementById("watch");
