@@ -1,5 +1,7 @@
 # Varun S — Portfolio
 
+**Live:** https://varun-portfolio-lac.vercel.app
+
 Scroll-driven portfolio for **Varun S** — AI · Embedded Systems · Full-Stack.
 
 Every section is a scene from the portfolio film: it pins to the screen and animates as you scroll
